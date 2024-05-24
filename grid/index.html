@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <a href="../Components/Principal.html">
+
+      <img src="../img/Recurso_3.svg" alt="">
+    </a>
+    <div class="menu">
+      <a href="../grid/index.html">
+        <input type="submit" value="Acessorios" />
+      </a>
+      <a href="../Components/accesorios.html">
+        <input type="submit" value="Modelos" />
+      </a>
+      <a href="../modelos/modelos.html">
+        <input type="submit" value="Ropa" />
+      </a>
+      <a href="">
+        <input type="submit" value="servicios">
+    </a>
+      <a href="../Components/contacto.html">
+        <input type="submit" value="Soporte">
+
+    </a>
+    </div>
+    <div class="container mx-auto py-4">
+      <div class="resultados-busqueda flex-container"></div>
+
+      <input type="text" id="searchInput" placeholder="Buscar vehículo..."
+        class="mt-4 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+    </div>
+    <div class="icon" id="carrito-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1)">
+        <path
+          d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z">
+        </path>
+        <circle cx="10.5" cy="19.5" r="1.5"></circle>
+        <circle cx="17.5" cy="19.5" r="1.5"></circle>
+      </svg>
+      <span id="carrito-cantidad">0</span>
+    </div>
+    <div id="carrito-modal">
+      <h2>Carrito de Compras RivasMotors</h2>
+      <ul id="carrito-lista"></ul>
+      <button id="cerrar-carrito">Cerrar</button>
+    </div>
+    <a href="../Components/login.php">
+      <input type="submit" value="Accede" />
+    </a>
+  </header>
+
+
+ 
+  <div class="grid-container" id="arepa-template">
+    <div class="grid grid-cols-4 gap-4 p-4">
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/xt660.html">
+
+            <img src="../img/motociletas/660xt.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">Yamaha XT600</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">5.500,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/ndk125.html">
+
+            <img src="../img/motociletas/AKT-NKD-125-Colombia.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">AKT NKD 125 </h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">2.499 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/betarr50.html">
+            <img src="../img/motociletas/beta-rr-350-4t-racing-2023-alquiler.jpg" alt="Product Image"
+              class="product-image mb-2">
+
+          </a>
+          <h3 class="text-lg font-semibold">BETA RR 350 4 TIEMPOS</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold">10.495 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/betarr502T.html">
+            <img src="../img/motociletas/beta-RR-enduro-50-cc-sport-eu-5-rojo-e1648111648601.jpg" alt="Product Image"
+              class="product-image mb-2">
+
+          </a>
+          <h3 class="text-lg font-semibold">BETA RR 50 2 TIEMPOS</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold">3.120,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/bmws1000.html">
+
+            <img src="../img/motociletas/bmw 1100rr.avif" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">BMW S 1100 RR</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">19.900,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/boxer.html">
+
+            <img src="../img/motociletas/boxer ct100.webp" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">BOXER CT 100</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">4.100 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/bwsFi.html">
+            <img src="../img/motociletas/bwsfi-gris4.png" alt="Product Image" class="product-image mb-2">
+
+          </a>
+          <h3 class="text-lg font-semibold">BWS X FI 125</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold">3.140 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/Can-am_outlander.html">
+
+            <img src="../img/motociletas/Can am outlander.avif" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">CAN-AM OUTLANDER</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold">29.799 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/Can-am_Road.html">
+
+            <img src="../img/motociletas/Can-am off road.avif" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">CAN-AM OFF ROAD</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">14.199 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/Can-am_Riker.html">
+
+            <img src="../img/motociletas/2017-Can-Am-Spyder-F3-S-1-1024x791-1.jpeg" alt="Product Image"
+              class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">CAN-AM RYKER</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">29.799 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/Cb600.html">
+
+            <img src="../img/motociletas/cb-600.webp" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">CB 600</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold">13.322,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/crf450.html">
+
+            <img src="../img/motociletas/crf 450.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">CRF 450R</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold">10.500,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/CrossCore.html">
+
+            <img src="../img/motociletas/crossCore rc.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">CrossCore</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">2.499,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/CryptonFi.html">
+
+            <img src="../img/motociletas/crypton fi.png" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">crypton FI 125</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">2001,43 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/Dr650.html">
+
+            <img src="../img/motociletas/dr650.png" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">SUZUKI DR650</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold">4.540 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/DucatiScrambler.html">
+
+            <img src="../img/motociletas/ducati scrambler.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">DUCATI SCRAMBLER</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold">7.900 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/Gasgas.html">
+
+            <img src="../img/motociletas/gasgas250.webp" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">GASgas250</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">10.990,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/kawasaki900.html">
+
+            <img src="../img/motociletas/kawasaki-z900-a2-2020-750x500.jpg" alt="Product Image"
+              class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">kawasaki Z900</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 10.599 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/ktm250F.html">
+
+            <img src="../img/motociletas/KTM-250-EXC-F-2023.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">KTM 250 F</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold">10.639,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/ktm250_EXC.html">
+
+            <img src="../img/motociletas/KTM-250-EXC-TPI-SIX-DAYS-2023.jpg" alt="Product Image"
+              class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">KTM 250 EXC 2023</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold">14.529,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <!--OTRO-->
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/ktm250_SX.html">
+
+            <img src="../img/motociletas/KTM-250-SX-2022-motocross-3-1200x800.jpg" alt="Product Image"
+              class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">KTM 250 SX</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">10.299,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/ktm450.html">
+
+            <img src="../img/motociletas/KTM-450-SX-F-2023.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">KTM 450 SX</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">12,169 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/kukuruchus.html">
+
+            <img src="../img/motociletas/kukuruchos.jpeg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">BRUTE FORCE® 300</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold">32.639,63 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/bike_megazine.html">
+
+            <img src="../img/motociletas/megazine.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">BIKE MEGAZINE</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 2.940 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <!--OTRO-->
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/moro08.html">
+
+            <img src="../img/motociletas/moro 08.webp" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">MORO 08</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 4.899 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/moro07anniversary.html">
+
+            <img src="../img/motociletas/moro-07 anniversary.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">MORO 07 ANNIVERSARY</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">4699,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/moro07.html">
+
+            <img src="../img/motociletas/moro-07.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">MORO 07</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 4.899 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/mt09.html">
+
+            <img src="../img/motociletas/mt-09.jpeg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">YAMAHA MT-09</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold">10.999 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <!--OTRO-->
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/mx250Enduro.html">
+
+            <img src="../img/motociletas/mx250enduro.jpeg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">MX 250 ENDURO</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 9.753,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/n-max.html">
+
+            <img src="../img/motociletas/n-max.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">YAMAHA N-MAX 155CC</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">3.499 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/husqvarna.html">
+
+            <img src="../img/motociletas/PHO_BIKE_90_RE_HQV-23-EE-3_SALL_AEPI_V1.png" alt="Product Image"
+              class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">HUSQVARNA</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 4.699 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/polarisSportman.html">
+
+            <img src="../img/motociletas/polaris sportsman.png" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">POLARIS SPORTSMAN</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold">20.990,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <!--OTRO-->
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/raptor200.html">
+
+            <img src="../img/motociletas/raptor 200.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">YAMAHA RAPTOR 200</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 20.253,80 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/raptor700.html">
+
+            <img src="../img/motociletas/raptor 700r.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">YAMAHA RAPTOR 700R</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">31.299 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/Rmz.html">
+
+            <img src="../img/motociletas/rmz suzuki.png" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">SUZUKI RMZ</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold">8.580 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/Strom.html">
+
+            <img src="../img/motociletas/suzuki-dl650-xt-vstrom-2022.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">SUZUKI V-STROM 650</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold">7.975,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <!--OTRO-->
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/bike_wasa.html">
+
+            <img src="../img/motociletas/the wasa.jpeg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">BIKE WASA</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 849,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/vivaR.html">
+
+            <img src="../img/motociletas/VIVA-R-STYLE-NEGRA.png" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">SUZUKI VIVA R 115</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">1.667,66 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/wabash.html">
+
+            <img src="../img/motociletas/wabash rt.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">WABASH</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 3.499 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/xt600R.html">
+
+            <img src="../img/motociletas/xt660.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">YAMAHA XT 660R </h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold">7.000,00 € </p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <!--OTRO-->
+
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/xtz125.html">
+
+            <img src="../img/motociletas/xtz125.jpeg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">YAMAHA XTZ 125CC</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">5.499 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/xtz250.html">
+
+            <img src="../img/motociletas/xtz250.webp" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">YAMAHA XTZ 250CC</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">6.457,66 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/y-07.html">
+
+            <img src="../img/motociletas/y-007.jpeg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">YAMAHA Y-07</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 2.999 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/wr250.html">
+
+            <img src="../img/motociletas/yamaha-wr250r.webp" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">YAMAHA WR 250R </h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 6.500,00 € </p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+
+
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/yz125.html">
+
+            <img src="../img/motociletas/yz 125.jpg" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">YAMAHA YZ 125CC</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">8.299 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/yz450.html">
+            <img src="../img/motociletas/yz 450.jpg" alt="Product Image" class="product-image mb-2">
+
+          </a>
+          <h3 class="text-lg font-semibold">YAMAHA YZ 450CC</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (6 reviews)</div>
+          <p class="text-zinc-900 font-bold">9.399€</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/rmx450.html">
+
+            <img src="../img/motociletas/suzuki rmx 450.png" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">SUZUKI RMX 450</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (32 reviews)</div>
+          <p class="text-zinc-900 font-bold"> 9.190,00 €</p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="product-container producto-busqueda">
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <a href="../Motocicletas/crf250.html">
+
+            <img src="../img/motociletas/ZZ.webp" alt="Product Image" class="product-image mb-2">
+          </a>
+          <h3 class="text-lg font-semibold">CRF 250</h3>
+          <div class="text-yellow-400 mb-2">★★★★☆ (25 reviews)</div>
+          <p class="text-zinc-900 font-bold">9.850,00 € </p>
+          <button class="mt-2 bg-zinc-200 text-zinc-800 py-1 px-3 rounded hover:bg-zinc-300">Añadir al carrito</button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <footer class="parte-abajo">
+      <div class="todo">
+        <div class="count-4">
+          <div class="logo">
+            <img src="../img/Frame.png" alt="">
+          </div>
+          <div class="parrafo">
+            <p>Consecionario dedicado unicamente a la venta de motos,ropa accesorios.</p>
+            <span> Con el compromiso de presentar siempre una buena calidad a los mejores</span>
+            <span> precios</span>
+          </div>
+          <div class="logos">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x"
+              viewBox="0 0 16 16">
+              <path
+                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg>
+          </div>
+
+        </div>
+        <div class="derecha">
+
+          <div class="my-account">
+            <h5>My Account</h5>
+            <div class="amarillo"></div>
+            <span>My account</span>
+            <span>Order History</span>
+            <span>My Wishlist</span>
+
+          </div>
+          <div class="explorar">
+            <h5>Explorar</h5>
+            <div class="amarillo"></div>
+            <span>Motocicletas</span>
+            <span>Scotters</span>
+            <span>Bicicletas</span>
+            <span>WaveRunners</span>
+            <span>ATV</span>
+            <span>Vehiculo Ligero</span>
+            <span>Accesorios</span>
+            <span>Ropa & Merchan</span>
+          </div>
+
+          <div class="contacto">
+            <h5>Contacto</h5>
+            <div class="amarillo"></div>
+            <span>Address:Av.</span>
+            <span>Email:example@gmail.com</span>
+            <span>Fax: ###-###-##</span>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="negro"></div>
+
+      <span class="final">©2024 RivarsMotors - Todos los derechos reservados</span>
+    </footer>
+    <script type="module" src="../JavaScript/grid.js"></script>
+    <script type="module" src="../BBDD/Keys.js"></script>
+
+
+</body>
+
+</html>
