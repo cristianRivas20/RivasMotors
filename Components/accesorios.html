@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tienda</title>
+    <link rel="stylesheet" href="../Estilos/accesorios.css">
+</head>
+<body>
+<header>
+    <h1>Accesorios RivasMotors</h1>
+    <div class="container mx-auto py-4">
+        <div class="resultados-busqueda flex-container"></div>
+  
+        <input type="text" id="searchInput" placeholder="Buscar vehículo..."
+          class="mt-4 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+      </div>
+    <div class="container-icon">
+        <div id="container-cart-icon" class="container-cart-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+              </svg>
+              
+            <div class="count-products">
+                <span id="contador-productos">0</span>
+            </div>
+        </div>
+        
+          <div class="container-cart-products hidden-cart">
+            <div class="row-product">
+                <div class="cart-product">
+                    <div class="info-cart-product">
+                        <span class="cantidad-producto-carrito">1</span>
+                        <p class="titulo-producto-carrito">zapatos adidas</p>
+                        <span class="precio-producto-carrito">€80.00</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"  />
+                      </svg>
+                      
+                </div>
+            </div>
+           
+            <div class="cart-total">
+                <h3>total</h3>
+                <span class="total-pagar">200</span>
+            </div>
+
+          </div>
+    </div>
+    
+</header>
+
+<div class="container-items">
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Guida_De_Cadenas.html">
+                
+                <img src="../img/accesorios/accesorio Guia de cadena.jpg "class="icon-cart" alt="producto">
+            </a>
+            
+            
+        </figure>
+        <div class="info-product">
+            <h2>Guia De Cadenas</h2>
+            <p class="price">€120.00</p>
+            <button type="button" class="btn-add-cart">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Asiento_confort.html">
+                
+                <img src="../img/accesorios/accesorio asiento comfort.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Asiento Comfort</h2>
+            <p class="price">€150.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Components/producto.html">
+                
+                <img src="../img/accesorios/accesorio amortiguador trasero.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Amortiguador Trasero</h2>
+            <p class="price">€1.550.20</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Bateria_atv.html">
+                
+                <img src="../img/accesorios/accesorio ATV bateria.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>ATV Bateria</h2>
+            <p class="price">€710.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Cable_sintetico.html">
+                
+                <img src="../img/accesorios/accesorio ATV cable sintetico.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>ATV Cable sintetico</h2>
+            <p class="price">€400.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Protector_frontal.html">
+                
+                <img src="../img/accesorios/accesorio ATV protector frontal.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>ATV Protector Frontal</h2>
+            <p class="price">€900.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/bateria_bike.html">
+                
+                <img src="../img/accesorios/accesorio bike bateria de 500Wh.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Bateria Bike 500WH</h2>
+            <p class="price">€300.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/empuñadoras.html">
+                
+                <img src="../img/accesorios/accesorio bike juego de empuñaduras de repuesto.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Empuñaduras Bike</h2>
+            <p class="price">€60.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/juego_de_pedales.html">
+                
+                <img src="../img/accesorios/accesorio bike juego de pedales.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Juego De Pedales</h2>
+            <p class="price">€50.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/montaje_manillar.html">
+                
+                <img src="../img/accesorios/accesorio bike montaje de potencia del manillar.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Montaje Del Manillal</h2>
+            <p class="price">€70.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/parrilla_equipamiento.html">
+                
+                <img src="../img/accesorios/accesorio bike parrilla para equipamiento.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Parrilla Equipamiento</h2>
+            <p class="price">€200.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/bike_repuesto_eje.html">
+                
+                <img src="../img/accesorios/accesorio bike pieza de repuesto eje trasero.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Pieza Repuesto Eje</h2>
+            <p class="price">€100.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <!--parte abajo-->
+    <div class="item">
+        <figure>
+            <a href="../Articulos/sistema_De_Escape.html">
+                
+                <img src="../img/accesorios/accesorio Sistema de escape AkrapoviC.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Sistema De Escape</h2>
+            <p class="price">€893.89</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/cinturon_Seguridad.html">
+                
+                <img src="../img/accesorios/accesorio ATV cinturon de seguridad 6 puntos.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Cinturon De Seguridad</h2>
+            <p class="price">€26.06</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Atv_conjunto_eje.html">
+                
+                <img src="../img/accesorios/accesorio ATV conjunto de eje de serie.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>ATV Conjunto De Eje</h2>
+            <p class="price">€34.99</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/ATV_cubierta_lateral.html">
+                
+                <img src="../img/accesorios/accesorio ATV cubierta lateal.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>ATV Cubierta Lateral</h2>
+            <p class="price">€109.80</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/ATV_filtro_Aire.html">
+                
+                <img src="../img/accesorios/accesorio ATV kit de filtro de aire.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>ATV Filtro De Aire</h2>
+            <p class="price">€22.99</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/ATV_Kit_comprensor.html">
+                
+                <img src="../img/accesorios/accesorio ATV kit de turbocomprensor.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>ATV kIT TurboComprensor</h2>
+            <p class="price">€295.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/luneta_trasera.html">
+                
+                <img src="../img/accesorios/accesorio ATV luneta trasera blanca.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Luneta Trasera Blanca</h2>
+            <p class="price">€198.99</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/protector_delantero.html">
+                
+                <img src="../img/accesorios/accesorio ATV protector delantero de alta resistencia.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Protector Delantero</h2>
+            <p class="price">€223.79</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/tablero.html">
+                
+                <img src="../img/accesorios/accesorio ATV tablero instrumentacion.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Tablero Instrumentacion</h2>
+            <p class="price">€433.58</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/pieza_stop_bike.html">
+                
+                <img src="../img/accesorios/accesorio bike piloto trasero.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Pieza Stop Bike</h2>
+            <p class="price">€11.99</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/separador_Potencia.html">
+                
+                <img src="../img/accesorios/accesorio bike separador de potencia de material compuesto.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Separador De Potencia</h2>
+            <p class="price">€4.99</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Asiento_bike.html">
+                
+                <img src="../img/accesorios/accesorio bike sillin.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Asiento Bike</h2>
+            <p class="price">€20.27</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Tapa_compresion_bike.html">
+                
+                <img src="../img/accesorios/accesorio bike tapa de compresion de araña.jpg"class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Tapa De Compresion Bike</h2>
+            <p class="price">€7.48</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/faro_bike.html">
+                
+                <img src="../img/accesorios/accesorio bike unidad del faro.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Faro Bike</h2>
+            <p class="price">€24.07</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/cargador_bike.html">
+                
+                <img src="../img/accesorios/accesorio cargador usb.jpg"class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Cargador USB Bike </h2>
+            <p class="price">€81.33</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/cubierta_Aluminio.html">
+                
+                <img src="../img/accesorios/accesorio cubrecarter de aluminio.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>CubreCarter Aluminio</h2>
+            <p class="price">€559.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Juego_intermitentes.html">
+                
+                <img src="../img/accesorios/accesorio juego de intermitentes.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Juego De Intermitentes</h2>
+            <p class="price">€21.08</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/kit_guardabarros.html">
+                
+                <img src="../img/accesorios/accesorio kit de guardabarros.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Kit De Guardabarros</h2>
+            <p class="price">€175.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Kit_pletinas.html">
+                
+                <img src="../img/accesorios/accesorio kit de pletinas de direccion.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Kit De Pletinas De Direccion</h2>
+            <p class="price">€413.41</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+     <!--parte abajo-->
+    <div class="item">
+        <figure>
+            <a href="../Articulos/embellecedor.html">
+                
+                <img src="../img/accesorios/accesorio kit embellecedor de color de manetas.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Embellecedor De Color Yz</h2>
+            <p class="price">€7.88</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Alfombrilla.html">
+                
+                <img src="../img/accesorios/accesorio ligero alfombrilla club clean.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Alfombrilla ATV</h2>
+            <p class="price">€120.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/kit_cubierta_golf.html">
+                
+                <img src="../img/accesorios/accesorio ligero kit cubierta para bolsas de golf.jpg"class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Kit Cubierta De Golf</h2>
+            <p class="price">€35.69</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/faros_delanteros.html">
+                
+                <img src="../img/accesorios/accesorio ligero kit de actualizacion de faros delanteros.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Faros Delanteros ATV</h2>
+            <p class="price">€42.70</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Rueda_alineacion.html">
+                
+                <img src="../img/accesorios/accesorio ligero llanta de aleacion.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Rueda De Aleacion</h2>
+            <p class="price">€360.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/tapacubos.html">
+                
+                <img src="../img/accesorios/accesorio ligero tapacubos yamaha.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>TapaCubos ATV</h2>
+            <p class="price">€26.99</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/maleta_lateral.html">
+                
+                <img src="../img/accesorios/accesorio maleta lateral con 30 litros lado izq.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Maleta Lateral 30L Izq</h2>
+            <p class="price">€152.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/manoplas.html">
+                
+                <img src="../img/accesorios/accesorio manoplas.jpg"class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Manoplas</h2>
+            <p class="price">€13.59</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/carenado.html">
+                
+                <img src="../img/accesorios/Accesorio mini carenado XSR900.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Carenado XSR900</h2>
+            <p class="price">€105.47</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/pack_winder.html">
+                
+                <img src="../img/accesorios/accesorio pack winter xmax.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Pack Winter X-Max</h2>
+            <p class="price">€389.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/pieza_matricula.html">
+                
+                <img src="../img/accesorios/accesorio porta matriculas.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Porta Matriculas</h2>
+            <p class="price">€6.95</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/protector_radiador.html">
+                
+                <img src="../img/accesorios/accesorio protector de radiador.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Protector Radiador </h2>
+            <p class="price">€15.58</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/RadiadorGYTR.html">
+                
+                <img src="../img/accesorios/accesorio radiador GYTR.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Radiador GYTR</h2>
+            <p class="price">€166.78</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Sistema_Cambio_rapido.html">
+                
+                <img src="../img/accesorios/accesorio sistema de cambio rapido.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Sistema De Cambio Rapido</h2>
+            <p class="price">€61.10</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Tapa_motor.html">
+                
+                <img src="../img/accesorios/Accesorio Tapa de motor R1.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Tapa De Motor R1</h2>
+            <p class="price">€49.00</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Tenere.html">
+                
+                <img src="../img/accesorios/accesorio tenere 700Slip-on.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Tenere 700Slip-on</h2>
+            <p class="price">€1186.73</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Escape_slip_titanium.html">
+                
+                <img src="../img/accesorios/accesorios.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>ESCAPE SLIP ON TITANIUM</h2>
+            <p class="price">€746.88</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Filtro_Atv.html">
+                
+                <img src="../img/accesorios/atv-2.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Filtro De Aire ATV</h2>
+            <p class="price">€13.89</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Bolsa_deposito.html">
+                
+                <img src="../img/accesorios/bolsa de deposito.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Bolsa De Deposito</h2>
+            <p class="price">€82.75</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <!--otro-->
+    <div class="item">
+        <figure>
+            <a href="../Articulos/botella_agua.html">
+                
+                <img src="../img/accesorios/ciclismo botella de agua.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Botella De Agua</h2>
+            <p class="price">€5.95</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/TrajeCiclismo.html">
+                
+                <img src="../img/accesorios/ciclismo culotte corte bicicletas de carreras.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Traje De Ciclismo</h2>
+            <p class="price">€106.80</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/guantes.html">
+                
+                <img src="../img/accesorios/equipamiento guantes.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Guantes Motocross</h2>
+            <p class="price">€12.98</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/impermeable.html">
+                
+                <img src="../img/accesorios/equipamiento mono impermeable.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Impermeable</h2>
+            <p class="price">€35.98</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/sudaderaCapucha.html">
+                
+                <img src="../img/accesorios/equipamiento sudadera con capucha Hyper naked.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>sudadera Con Capucha</h2>
+            <p class="price">€89.99</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/manetaFrenos.html">
+                
+                <img src="../img/accesorios/Maneta de freno anodizada.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Maneta De Frenos</h2>
+            <p class="price">€46.95</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Mochila_alpinestar.html">
+                
+                <img src="../img/accesorios/mochila.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Mochila Alpinestars</h2>
+            <p class="price">€98.96</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    <div class="item">
+        <figure>
+            <a href="../Articulos/Camiseta_yamaha.html">
+                
+                <img src="../img/ropa.jpg "class="icon-cart" alt="producto">
+            </a>
+        </figure>
+        <div class="info-product">
+            <h2>Camiseta Yamaha</h2>
+            <p class="price">€19.99</p>
+            <button class="btn-add-cart" type="button">añadir al carrito</button>
+        </div>
+    </div>
+    
+
+<script src="../JavaScript/accesorios.js"></script>
+    
+</body>
+</html>
